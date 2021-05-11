@@ -1,0 +1,16 @@
+/* ~~ global.css ~~ */
+
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    background-color: #eee;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+}

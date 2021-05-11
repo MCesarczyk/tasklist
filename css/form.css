@@ -1,0 +1,52 @@
+/* ~~ form.css ~~ */
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form__fieldset {
+    background-color: #fff;
+    border: solid 1px #eee;
+    padding: 15px;
+}
+
+.form__fieldset--container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__label {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.form__input {
+    border: solid 1px #ddd;
+    padding: 5px;
+    flex: 1 1 auto;
+    margin-right: 20px;
+}
+
+.form__button {
+    display: flex;
+    color: #fff;
+    border: none;
+    padding: 5px;
+}
+
+.form__button--add {
+    background-color: teal;
+    padding: 10px;
+}
+
+.form__button--tick {
+    background-color: green;
+}
+
+.form__button--remove {
+    background-color: crimson;
+}
+
+.form__listItem {
+    display: flex;
+}
