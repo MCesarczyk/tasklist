@@ -50,3 +50,7 @@
 .form__listItem {
     display: flex;
 }
+
+.form__listItem--done {
+    text-decoration: line-through;
+}
