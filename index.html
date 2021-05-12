@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -7,32 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" />
     <link href="css/global.css" rel=stylesheet>
+    <link href="css/container.css" rel=stylesheet>
     <link href="css/form.css" rel=stylesheet>
     <script defer src="js/script.js"></script>
-    <meta property="og:title" content="Cutting parameters calculator" />
+    <meta property="og:title" content="Simple TO-DO list"/>
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mcesarczyk.github.io/CNC-parameters-calc/" />
-    <meta property="og:image" content="https://www.bbntimes.com/images/CNC.jpg" />
+    <meta property="og:url" content=" "/>
+    <meta property="og:image" content=" "/>
     <link rel="icon" href="images/tick.png" />
     <title>Lista zadań</title>
 </head>
 
 <body class="body">
     <div class="container">
-        <header>
-            <h1>Lista zadań</h1>
-        </header>
         <main>
+            <h1>Lista zadań</h1>
             <form class="form js-form">
                 <fieldset class="form__fieldset">
                     <label class="form__label">Dodaj nowe zadanie</label>
                 </fieldset>
-                <fieldset class="form__fieldset form__fieldset--container">
+                <fieldset class="form__fieldset form__fieldset--input">
                     <input class="form__input js-taskInput" placeholder="Co jest do zrobienia?">
                     <button class="form__button form__button--add">Dodaj zadanie</button>
                 </fieldset>
@@ -41,18 +41,8 @@
                 <fieldset class="form__fieldset">
                     <label class="form__label">Lista zadań</label>
                 </fieldset>
-                <fieldset class="form__fieldset form__fieldset--container">
+                <fieldset class="form__fieldset">
                     <ul class="form__list js-tasks">
-                        <li class="form__listItem">
-                            <button class="form__button form__button--tick">Ok</button>
-                            test1
-                            <button class="form__button form__button--remove">Usuń</button>
-                        </li>
-                        <li class="form__listItem">
-                            <button class="form__button form__button--tick">Ok</button>
-                            test2
-                            <button class="form__button form__button--remove">Usuń</button>
-                        </li>
                     </ul>
                 </fieldset>
             </form>

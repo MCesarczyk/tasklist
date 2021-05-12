@@ -2,15 +2,18 @@
 
 html {
     box-sizing: border-box;
-}
-
-*, ::after, ::before {
+  }
+  
+  *,
+  ::after,
+  ::before {
     box-sizing: inherit;
-}
-
-.body {
+  }
+  
+  .body {
     background-color: #eee;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    font-family: "Lato", sans-serif;
-}
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14 px;
+  }
