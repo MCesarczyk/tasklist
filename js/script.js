@@ -1,12 +1,20 @@
 {
     const tasks = [];
 
+    const resetInput = () => {
+        const taskInput = document.querySelector(".js-taskInput");
+        taskInput.value = "";
+        taskInput.focus();
+
+    };
+
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
 
         render();
+        resetInput();
     };
 
     const removeTask = (index) => {
@@ -54,19 +62,10 @@
             document.querySelector(".js-tasks").innerHTML = htmlString;
 
             triggerEvents();
-
-            resetInput();
         }
     };
 
-    const resetInput = () => {
-        const taskInput = document.querySelector(".js-taskInput");
-        taskInput.value = "";
-        taskInput.focus();
-
-    };
-
-    const onFormSubmit = (event) => {
+       const onFormSubmit = (event) => {
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-taskInput").value.trim();

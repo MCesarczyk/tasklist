@@ -28,7 +28,7 @@
 
 .form__input {
     border: solid 1px #ddd;
-    padding: 5px;
+    padding: 10px;
     flex: 1 1 auto;
     margin: 10px;
 }
