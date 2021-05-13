@@ -103,6 +103,10 @@
     border-color: #ddd;
 }
 
+.form__listItemContent {
+    word-break: break-all;
+}
+
 .form__listItemContent--done {
     text-decoration: line-through;
 }
