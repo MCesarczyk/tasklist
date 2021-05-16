@@ -21,11 +21,6 @@
     }
 }
 
-.form__label {
-    font-weight: 700;
-    font-size: 20px;
-}
-
 .form__input {
     border: solid 1px #ddd;
     padding: 10px;
@@ -83,30 +78,4 @@
 .form__button--remove:active {
     background-color: hsl(348, 83%, 60%);
     box-shadow: inset 1px 1px 3px darkgrey;
-}
-
-.form__list {
-    list-style-type: none;
-    padding-inline-start: 0px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.form__listItem {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 28px 1fr 28px;
-    align-items: center;
-    padding: 6px;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: #ddd;
-}
-
-.form__listItemContent {
-    word-break: break-all;
-}
-
-.form__listItemContent--done {
-    text-decoration: line-through;
 }

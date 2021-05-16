@@ -50,9 +50,9 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class="form__listItem">
+                <li class="list__item">
                   <button class="form__button form__button--done js-done">${task.done ? "✔" : " "}</button>
-                <span class="form__listItemContent${task.done ? " form__listItemContent--done" : ""}">
+                <span class="list__itemContent${task.done ? " list__itemContent--done" : ""}">
                 ${task.content}
                 </span>
                  <button class="form__button form__button--remove js-remove">🗑</button>
@@ -65,7 +65,7 @@
         }
     };
 
-       const onFormSubmit = (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-taskInput").value.trim();

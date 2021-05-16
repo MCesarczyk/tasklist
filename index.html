@@ -13,39 +13,39 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" />
     <link href="css/global.css" rel=stylesheet>
+    <link href="css/section.css" rel=stylesheet>
     <link href="css/container.css" rel=stylesheet>
     <link href="css/form.css" rel=stylesheet>
+    <link href="css/list.css" rel=stylesheet>
     <script defer src="js/script.js"></script>
-    <meta property="og:title" content="Simple TO-DO list"/>
+    <meta property="og:title" content="Simple TO-DO list" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mcesarczyk.github.io/tasklist/"/>
-    <meta property="og:image" content="https://images2.minutemediacdn.com/image/upload/c_crop,h_2164,w_3845,x_0,y_259/f_auto,q_auto,w_1100/v1554918405/shape/mentalfloss/94735-istock-863607936.jpg"/>
+    <meta property="og:url" content="https://mcesarczyk.github.io/tasklist/" />
+    <meta property="og:image"
+        content="https://images2.minutemediacdn.com/image/upload/c_crop,h_2164,w_3845,x_0,y_259/f_auto,q_auto,w_1100/v1554918405/shape/mentalfloss/94735-istock-863607936.jpg" />
     <link rel="icon" href="images/tick.png" />
     <title>Lista zadań</title>
 </head>
 
 <body class="body">
     <div class="container">
-        <main>
+        <header>
             <h1>Lista zadań</h1>
-            <form class="form js-form">
-                <fieldset class="form__fieldset">
-                    <label class="form__label">Dodaj nowe zadanie</label>
-                </fieldset>
-                <fieldset class="form__fieldset form__fieldset--input">
-                    <input class="form__input js-taskInput" placeholder="Co jest do zrobienia?">
-                    <button class="form__button form__button--add">Dodaj zadanie</button>
-                </fieldset>
-            </form>
-            <form>
-                <fieldset class="form__fieldset">
-                    <label class="form__label">Lista zadań</label>
-                </fieldset>
-                <fieldset class="form__fieldset">
-                    <ul class="form__list js-tasks">
-                    </ul>
-                </fieldset>
-            </form>
+        </header>
+        <main>
+            <section>
+                <h1 class="section__header">Dodaj nowe zadanie</h1>
+                <form class="form js-form">
+                    <fieldset class="form__fieldset form__fieldset--input">
+                        <input class="form__input js-taskInput" placeholder="Co jest do zrobienia?">
+                        <button class="form__button form__button--add">Dodaj zadanie</button>
+                    </fieldset>
+                </form>
+            </section>
+            <section>
+            </section>
+            <h1 class="section__header">Lista zadań</h1>
+            <ul class="list js-tasks"></ul>
         </main>
     </div>
 </body>
