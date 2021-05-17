@@ -1,12 +1,11 @@
 {
     const tasks = [];
 
-    const resetInput = () => {
+    const resetInput = (taskInput) => {
         const taskInput = document.querySelector(".js-taskInput");
         taskInput.value = "";
         taskInput.focus();
-
-    };
+    }
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -14,18 +13,17 @@
         });
 
         render();
-        resetInput();
-    };
+    }
 
     const removeTask = (index) => {
         tasks.splice(index, 1);
         render();
-    };
+    }
 
     const toggleTaskDone = (index) => {
         tasks[index].done = !tasks[index].done;
         render();
-    };
+    }
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -43,7 +41,7 @@
                 toggleTaskDone(index);
             });
         });
-    };
+    }
 
     const render = () => {
         let htmlString = "";
@@ -54,29 +52,33 @@
                   <button class="list__button list__button--done js-done">
                     ${task.done ? "✔" : " "}
                   </button>
-                  <span class="list__itemContent${task.done ? " list__itemContent--done" : ""}">
+                  <span class="list__itemContent
+                    ${task.done ? " list__itemContent--done" : ""}"
+                  >
                     ${task.content}
                   </span>
                   <button class="list__button list__button--remove js-remove">🗑</button>
                 </li>
                 `;
-
+        }
+        
             document.querySelector(".js-tasks").innerHTML = htmlString;
 
             bindEvents();
-        }
-    };
+    }
 
     const onFormSubmit = (event) => {
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-taskInput").value.trim();
+        const taskInput = document.querySelector(".js-taskInput");
 
         if (newTaskContent === "") {
             return;
-        };
+        }
 
         addNewTask(newTaskContent);
+        resetInput(taskInput);
     };
 
     const init = () => {
@@ -85,7 +87,7 @@
         const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", onFormSubmit);
-    };
+    }
 
     init();
 }
