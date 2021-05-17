@@ -9,7 +9,7 @@
 .list__item {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 28px 1fr 28px;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 6px;
     border-style: solid;
@@ -23,4 +23,42 @@
 
 .list__itemContent--done {
     text-decoration: line-through;
+}
+
+.list__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+}
+
+.list__button--done {
+    background-color: green;
+    }
+
+.list__button--done:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.list__button--done:active {
+    background-color: hsl(120, 100%, 40%);
+    box-shadow: inset 1px 1px 3px darkgrey;
+}
+
+.list__button--remove {
+    background-color: crimson;
+}
+
+.list__button--remove:hover {
+    background-color: hsl(348, 83%, 55%);
+}
+
+.list__button--remove:active {
+    background-color: hsl(348, 83%, 60%);
+    box-shadow: inset 1px 1px 3px darkgrey;
 }
