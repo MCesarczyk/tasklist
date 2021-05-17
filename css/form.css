@@ -4,7 +4,6 @@
     background-color: #fff;
     padding: 15px;
     display: flex;
-    justify-content: space-between;
 }
 
 @media (max-width: 768px) {
@@ -16,14 +15,13 @@
 .form__input {
     border: solid 1px #ddd;
     padding: 10px;
-    flex: 1 1 auto;
+    flex-grow: 1;
     margin: 10px;
 }
 
 .form__button {
     cursor: pointer;
     display: flex;
-    justify-content: center;
     align-content: center;
     color: #fff;
     border: none;
@@ -43,31 +41,4 @@
 .form__button--add:active {
     background-color: hsl(180, 100%, 40%);
     box-shadow: inset 1px 1px 2px darkgrey;
-}
-
-.form__button--done {
-    background-color: green;
-    height: 28px;
-}
-
-.form__button--done:hover {
-    background-color: hsl(120, 100%, 35%);
-}
-
-.form__button--done:active {
-    background-color: hsl(120, 100%, 40%);
-    box-shadow: inset 1px 1px 3px darkgrey;
-}
-
-.form__button--remove {
-    background-color: crimson;
-}
-
-.form__button--remove:hover {
-    background-color: hsl(348, 83%, 55%);
-}
-
-.form__button--remove:active {
-    background-color: hsl(348, 83%, 60%);
-    box-shadow: inset 1px 1px 3px darkgrey;
 }
