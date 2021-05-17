@@ -1,22 +1,12 @@
 /* ~~ form.css ~~ */
 
 .form {
-    margin-bottom: 10px;
-}
-
-.form__fieldset {
-    background-color: #fff;
-    border: solid 1px #eee;
-    padding: 15px;
-}
-
-.form__fieldset--input {
     display: flex;
     justify-content: space-between;
 }
 
 @media (max-width: 768px) {
-    .form__fieldset--input {
+    .form {
         flex-direction: column;
     }
 }
