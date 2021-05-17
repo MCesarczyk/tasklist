@@ -1,6 +1,7 @@
 .list {
+    background-color: #fff;
+    padding: 15px;
     list-style-type: none;
-    padding-inline-start: 0px;
     width: 100%;
     margin: 0 auto;
 }
