@@ -2,7 +2,6 @@
     const tasks = [];
 
     const resetInput = (taskInput) => {
-        const taskInput = document.querySelector(".js-taskInput");
         taskInput.value = "";
         taskInput.focus();
     }
