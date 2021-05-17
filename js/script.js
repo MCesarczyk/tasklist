@@ -27,7 +27,7 @@
         render();
     };
 
-    const triggerEvents = () => {
+    const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -61,7 +61,7 @@
 
             document.querySelector(".js-tasks").innerHTML = htmlString;
 
-            triggerEvents();
+            bindEvents();
         }
     };
 
