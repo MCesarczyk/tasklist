@@ -1,5 +1,5 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const resetInput = (taskInput) => {
         taskInput.value = "";
@@ -7,20 +7,30 @@
     }
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent }
+        ];
 
         render();
     }
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ]
+
         render();
     }
 
     const toggleTaskDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+        tasks = [
+            ...tasks.slice(0, index),
+            { ...tasks[index], done: true },
+            ...tasks.slice(index + 1),
+        ]
+
         render();
     }
 
@@ -60,10 +70,10 @@
                 </li>
                 `;
         }
-        
-            document.querySelector(".js-tasks").innerHTML = htmlString;
 
-            bindEvents();
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        bindEvents();
     }
 
     const onFormSubmit = (event) => {
