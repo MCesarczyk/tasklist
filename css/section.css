@@ -20,11 +20,22 @@
     margin: 0 0 1px 0;
 }
 
+/* @media (max-width:800px) {
+    .section__headerContainer {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+} */
+
 .section__headerButton {
     color: teal;
     font-weight: 400;
     background-color: #fff;
     border: none;
+}
+
+.section__headerButton:hover {
+    color: hsl(180, 100%, 35%);
 }
 
 .section__headerButton:disabled {
