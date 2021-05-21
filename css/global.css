@@ -12,7 +12,8 @@ html {
   
   .body {
     background-color: #eee;
-    max-width: 1000px;
+    max-width: 1024px;
+    min-width: 320px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 14 px;
