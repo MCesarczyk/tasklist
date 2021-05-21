@@ -1,5 +1,7 @@
 {
     let tasks = [];
+    let toggleItemVisibility = "";
+// console.log(tasks.map(({ done }) => done === true));    
 
     const resetInput = (taskInput) => {
         taskInput.value = "";
@@ -41,7 +43,11 @@
         // tasks = tasks.map
     };
 
-    // new
+    const toggleDoneItemsVisibility = () => {
+        toggleItemVisibility = (toggleItemVisibility === "") ? "list__item--hidden" : "";
+        render();
+    };
+    
     const markAllTasksDone = () => {
         while (tasks.some(({ done }) => done === false)) {
             taskStates = tasks.map(({ done }) => done === true);
@@ -56,7 +62,6 @@
         };
         render();
     };
-    // new
 
     const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -80,7 +85,7 @@
         let htmlString = "";
         for (const task of tasks) {// dodać klasę tasks__item--hidden // ${hideDoneTasks ? "list__item--hidden" : ""}
             htmlString += `
-                <li class="list__item">
+                <li class="list__item ${toggleItemVisibility}">
                   <button class="list__button list__button--done js-done">
                     ${task.done ? "✔" : " "}
                   </button>
@@ -141,6 +146,9 @@
 
         const markAllDoneButton = document.querySelector(".js-markAllDone");
         markAllDoneButton.addEventListener("click", markAllTasksDone);
+
+        const hideAllDoneButton = document.querySelector(".js-hideAllDone");
+        hideAllDoneButton.addEventListener("click", toggleDoneItemsVisibility);
     };
 
     init();
