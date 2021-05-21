@@ -108,8 +108,8 @@
     const renderButtons = () => {
         let htmlButtonsString = "";
         htmlButtonsString +=
-            `<button class="section__headerButton js-hideAllDone">${toggleItemVisibility === "list__item--hidden" ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-            <button class="section__headerButton js-markAllDone">Ukończ wszystkie</button>
+            `<button class="section__headerButton ${tasks.length === 0 ? "section__headerButton--hidden" : ""} js-hideAllDone">${toggleItemVisibility === "list__item--hidden" ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+            <button class="section__headerButton  ${tasks.length === 0 ? "section__headerButton--hidden" : ""} js-markAllDone">Ukończ wszystkie</button>
         `;
         document.querySelector(".js-buttons").innerHTML = htmlButtonsString;
     };

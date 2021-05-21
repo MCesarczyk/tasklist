@@ -34,6 +34,10 @@
     border: none;
 }
 
+.section__headerButton--hidden {
+    display: none;
+}
+
 .section__headerButton:hover {
     color: hsl(180, 100%, 35%);
 }
