@@ -39,6 +39,7 @@
     padding: 5px;
     width: 28px;
     height: 28px;
+    transition: 0.5s;
 }
 
 .list__button--done {
@@ -50,7 +51,7 @@
 }
 
 .list__button--done:active {
-    background-color: hsl(120, 100%, 40%);
+    background-color: hsl(120, 100%, 45%);
     box-shadow: inset 1px 1px 3px darkgrey;
 }
 
@@ -59,10 +60,10 @@
 }
 
 .list__button--remove:hover {
-    background-color: hsl(348, 83%, 55%);
+    background-color: hsl(348, 83%, 60%);
 }
 
 .list__button--remove:active {
-    background-color: hsl(348, 83%, 60%);
+    background-color: hsl(348, 83%, 70%);
     box-shadow: inset 1px 1px 3px darkgrey;
 }
