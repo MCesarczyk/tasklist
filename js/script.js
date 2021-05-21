@@ -75,14 +75,13 @@
             });
         });
     };
-    
-    const renderButtons = () => {
-        let htmlButtonsString = "";
-        htmlButtonsString +=
-            `<button class="section__headerButton js-hideAllDone">Ukryj ukończone</button>
-            <button class="section__headerButton js-markAllDone">Ukończ wszystkie</button>
-        `;
-        document.querySelector(".js-buttons").innerHTML = htmlButtonsString;
+
+    const bindButtonsEvents = () => {
+        const markAllDoneButton = document.querySelector(".js-markAllDone");
+        markAllDoneButton.addEventListener("click", markAllTasksDone);
+
+        const hideAllDoneButton = document.querySelector(".js-hideAllDone");
+        hideAllDoneButton.addEventListener("click", toggleDoneItemsVisibility);
     };
 
     const renderTasks = () => {
@@ -106,17 +105,18 @@
         document.querySelector(".js-tasks").innerHTML = htmlTasksString;
     };
 
-    const bindButtonsEvents = () => {
-        const markAllDoneButton = document.querySelector(".js-markAllDone");
-        markAllDoneButton.addEventListener("click", markAllTasksDone);
-
-        const hideAllDoneButton = document.querySelector(".js-hideAllDone");
-        hideAllDoneButton.addEventListener("click", toggleDoneItemsVisibility);
+    const renderButtons = () => {
+        let htmlButtonsString = "";
+        htmlButtonsString +=
+            `<button class="section__headerButton js-hideAllDone">${toggleItemVisibility === "list__item--hidden" ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+            <button class="section__headerButton js-markAllDone">Ukończ wszystkie</button>
+        `;
+        document.querySelector(".js-buttons").innerHTML = htmlButtonsString;
     };
 
     const render = () => {
-        renderButtons();
         renderTasks();
+        renderButtons();
         bindRemoveEvents();
         bindToggleDoneEvents();
         bindButtonsEvents();
@@ -140,7 +140,7 @@
         render();
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
-        };
+    };
 
     init();
 }
