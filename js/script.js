@@ -1,7 +1,6 @@
 {
     let tasks = [];
     let toggleItemVisibility = "";
-// console.log(tasks.map(({ done }) => done === true));    
 
     const resetInput = (taskInput) => {
         taskInput.value = "";
@@ -37,10 +36,6 @@
         let taskStatus = tasks[index].done;
         taskStatus = (taskStatus === true) ? false : true;
         changeTaskStatus(index, taskStatus);
-    };
-
-    const hideAllDoneTasks = () => {
-        // tasks = tasks.map
     };
 
     const toggleDoneItemsVisibility = () => {
@@ -83,9 +78,10 @@
 
     const renderTasks = () => {
         let htmlString = "";
-        for (const task of tasks) {// dodać klasę tasks__item--hidden // ${hideDoneTasks ? "list__item--hidden" : ""}
+        for (const task of tasks) {
+            const itemVisibility = (task.done) ? toggleItemVisibility : "";
             htmlString += `
-                <li class="list__item ${toggleItemVisibility}">
+                <li class="list__item ${itemVisibility}">
                   <button class="list__button list__button--done js-done">
                     ${task.done ? "✔" : " "}
                   </button>
@@ -124,8 +120,6 @@
         isEveryTaskDone = tasks.every(({ done }) => done);
         const markAllDoneButton = document.querySelector(".js-markAllDone");
         markAllDoneButton.disabled = (isEveryTaskDone) ? true : false;
-        // const tasksInHTMLTableRows = tasks.map(({ content, done }) => ` <li class=${toggleItemVisibility}> ${content} ${done} </li> `);
-        // output.innerHTML = tasksInHTMLTableRows;
     };
 
     const onFormSubmit = (event) => {
