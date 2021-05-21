@@ -26,3 +26,7 @@
     background-color: #fff;
     border: none;
 }
+
+.section__headerButton:disabled {
+    color: #ccc;
+}

@@ -116,6 +116,11 @@
         bindRemoveEvents();
         bindToggleDoneEvents();
         // bindButtonsEvents();
+        isEveryTaskDone = tasks.every(({ done }) => done);
+        const markAllDoneButton = document.querySelector(".js-markAllDone");
+        markAllDoneButton.disabled = (isEveryTaskDone) ? true : false;
+        // const tasksInHTMLTableRows = tasks.map(({ content, done }) => ` <li class=${toggleItemVisibility}> ${content} ${done} </li> `);
+        // output.innerHTML = tasksInHTMLTableRows;
     };
 
     const onFormSubmit = (event) => {
