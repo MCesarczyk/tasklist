@@ -23,20 +23,17 @@
         render();
     };
 
-    const changeTaskStatus = (index, taskStatus) => {
+    const toggleTaskDone = (index) => {
         tasks = [
             ...tasks.slice(0, index),
-            { ...tasks[index], done: taskStatus },
+            {
+                ...tasks[index],
+                done: !tasks[index].done,
+            },
             ...tasks.slice(index + 1),
         ]
         render();
-    };
-
-    const toggleTaskDone = (index) => {
-        let taskStatus = tasks[index].done;
-        taskStatus = (taskStatus === true) ? false : true;
-        changeTaskStatus(index, taskStatus);
-    };
+    }
 
     const toggleDoneItemsVisibility = () => {
         toggleItemVisibility = (toggleItemVisibility === "") ? "list__item--hidden" : "";
