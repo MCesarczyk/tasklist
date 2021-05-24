@@ -33,7 +33,7 @@
             ...tasks.slice(index + 1),
         ]
         render();
-    }
+    };
 
     const toggleDoneItemsVisibility = () => {
         toggleItemVisibility = (toggleItemVisibility === "") ? "list__item--hidden" : "";
@@ -41,17 +41,10 @@
     };
 
     const markAllTasksDone = () => {
-        while (tasks.some(({ done }) => done === false)) {
-            taskStates = tasks.map(({ done }) => done === true);
-            const firstUndoneIndex = taskStates.indexOf(false)
-            let taskStatus = tasks[firstUndoneIndex].done;
-            taskStatus = true;
-            tasks = [
-                ...tasks.slice(0, firstUndoneIndex),
-                { ...tasks[firstUndoneIndex], done: taskStatus },
-                ...tasks.slice(firstUndoneIndex + 1),
-            ];
-        };
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
         render();
     };
 
