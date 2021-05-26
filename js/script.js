@@ -74,30 +74,28 @@
     };
 
     const renderTasks = () => {
-        let htmlTasksString = "";
-        for (const task of tasks) {
-            htmlTasksString += `
-                <li class="list__item${task.done && hideDoneTasks ? " list__item--hidden" : ""}">
-                  <button class="list__button list__button--done js-done">
+        const htmlTasksString = task => `
+                <li class="tasks__item${task.done && hideDoneTasks ? " tasks__item--hidden" : ""}">
+                  <button class="tasks__button tasks__button--done js-done">
                     ${task.done ? "✔" : " "}
                   </button>
-                  <span class="list__itemContent
-                    ${task.done ? " list__itemContent--done" : ""}"
+                  <span class="tasks__itemContent
+                    ${task.done ? " tasks__itemContent--done" : ""}"
                   >
                     ${task.content}
                   </span>
-                  <button class="list__button list__button--remove js-remove">🗑</button>
+                  <button class="tasks__button tasks__button--remove js-remove">🗑</button>
                 </li>
                 `;
-        };
-        document.querySelector(".js-tasks").innerHTML = htmlTasksString;
+        const tasksOutput = document.querySelector(".js-tasks");
+        tasksOutput.innerHTML = tasks.map(htmlTasksString).join(" ");
     };
 
     const renderButtons = () => {
         let htmlButtonsString = "";
         htmlButtonsString +=
             `<button class="section__headerButton ${tasks.length === 0 ? "section__headerButton--hidden" : ""} js-hideAllDone">
-                ${hideDoneTasks === "list__item--hidden" ? "Pokaż ukończone" : "Ukryj ukończone"}
+                ${hideDoneTasks === "tasks__item--hidden" ? "Pokaż ukończone" : "Ukryj ukończone"}
             </button>
             <button class="section__headerButton  ${tasks.length === 0 ? "section__headerButton--hidden" : ""} js-markAllDone">
                 Ukończ wszystkie
