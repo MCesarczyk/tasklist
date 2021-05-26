@@ -21,11 +21,11 @@
     display: none;
 }
 
-.tasks__itemContent {
+.tasks__content {
     word-break: break-all;
 }
 
-.tasks__itemContent--done {
+.tasks__content--done {
     text-decoration: line-through;
 }
 
