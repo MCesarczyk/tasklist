@@ -102,10 +102,10 @@
         };
 
         buttonsElement.innerHTML = `
-            <button class="section__headerButton js-hideAllDone">
+            <button class="buttons__button js-hideAllDone">
                 ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
-            <button class="section__headerButton js-markAllDone"
+            <button class="buttons__button js-markAllDone"
             ${tasks.every(({ done }) => done) ? "disabled" : ""}>
             Ukończ wszystkie
             </button>

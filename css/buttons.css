@@ -1,0 +1,52 @@
+.buttons__container {
+    display:grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 20px;
+    align-items: center;
+    background-color: #fff;
+    padding-right: 20px;
+    margin: 0 0 1px 0;
+}
+
+@media (max-width:620px) {
+    .buttons__container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
+
+.buttons__element {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width:620px) {
+    .buttons__element {
+        grid-template-columns: 1fr;
+    }
+}
+
+.buttons__button {
+    color: hsl(180, 100%, 25%);
+    font-weight: 400;
+    background-color: #fff;
+    border: none;
+    transition: 0.5s;
+}
+
+.buttons__button--hidden {
+    display: none;
+}
+
+.buttons__button:hover {
+    color: hsl(180, 100%, 45%);
+}
+
+.buttons__button:active {
+    color: hsl(180, 100%, 15%);
+}
+
+.buttons__button:disabled {
+    color: #ccc;
+}
