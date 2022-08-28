@@ -1,6 +1,6 @@
 # tasklist
 
-not such a simple TO-DO list anymore ;)
+Simple TO-DO list in HTML/CSS/Js
 
 ## demo:
 
